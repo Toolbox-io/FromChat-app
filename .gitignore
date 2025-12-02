@@ -62,3 +62,6 @@ crashlytics.properties
 deploymentTargetDropDown.xml
 fabric.properties
 render.experimental.xml
+
+# Xcode
+*.xcuserstate
