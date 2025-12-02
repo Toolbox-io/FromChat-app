@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "Compose-Multiplatform-Template"
+rootProject.name = "FromChat"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

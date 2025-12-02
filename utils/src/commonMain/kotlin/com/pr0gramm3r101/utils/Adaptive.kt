@@ -1,4 +1,5 @@
 @file:JvmName("Adaptive")
+
 package com.pr0gramm3r101.utils
 
 import androidx.compose.runtime.Composable
@@ -6,9 +7,6 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.toSize
-import com.pr0gramm3r101.utils.WindowWidthSizeClass.Companion.COMPACT
-import com.pr0gramm3r101.utils.WindowWidthSizeClass.Companion.EXPANDED
-import com.pr0gramm3r101.utils.WindowWidthSizeClass.Companion.MEDIUM
 import kotlin.jvm.JvmField
 import kotlin.jvm.JvmName
 import kotlin.jvm.JvmStatic

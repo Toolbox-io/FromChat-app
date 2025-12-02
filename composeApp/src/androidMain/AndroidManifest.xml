@@ -5,8 +5,8 @@
         android:icon="@mipmap/icon"
         android:roundIcon="@mipmap/icon_round"
         android:label="@string/app_name"
-        android:theme="@style/Theme.TwoXConnect.SplashScreen"
-        android:name=".TwoXConnectApp">
+        android:theme="@style/Theme.FromChat.SplashScreen"
+        android:name=".FromChatApp">
         <activity
             android:exported="true"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightAdjustment|keyboard|layoutDirection|locale|mcc|navigation|smallestScreenSize|touchscreen|uiMode"

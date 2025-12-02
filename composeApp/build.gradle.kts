@@ -1,5 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
@@ -26,17 +24,14 @@ kotlin {
         }
     }
     
-    jvm("desktop")
-    
     sourceSets {
-        val desktopMain by getting
-        
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.core.splashscreen)
             implementation(libs.androidx.adaptive.android)
         }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -46,7 +41,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(libs.constraintlayout.compose.multiplatform)
+            implementation(libs.constraintlayout)
             implementation(libs.navigation.compose)
             implementation(compose.materialIconsExtended)
 
@@ -57,10 +52,7 @@ kotlin {
             
             implementation(project(":utils"))
         }
-        desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
-        }
+
         iosMain.dependencies {
             implementation(libs.jetbrains.kotlinx.io.bytestring)
             implementation(libs.jetbrains.kotlinx.coroutines.core)
@@ -69,11 +61,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.example"
-    compileSdk = 35
+    namespace = "ru.fromchat.app"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example"
+        applicationId = "ru.fromchat.app"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -100,33 +92,13 @@ dependencies {
     debugImplementation(compose.uiTooling)
 }
 
-compose.desktop {
-    application {
-        mainClass = "com.example.MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.example"
-            packageVersion = "1.0.0"
-
-            linux {
-                iconFile.set(project.file("icons/icon.png"))
-            }
-
-            windows {
-                iconFile.set(project.file("icons/icon.ico"))
-            }
-        }
-    }
-}
-
 compose.resources {
     publicResClass = false
-    packageOfResClass = "com.example"
+    packageOfResClass = "ru.fromchat.app"
     generateResClass = auto
 }
 
-tasks.create("generateResourceAccessors") {
+tasks.register("generateResourceAccessors") {
     dependsOn(
         *(
             tasks.filter {

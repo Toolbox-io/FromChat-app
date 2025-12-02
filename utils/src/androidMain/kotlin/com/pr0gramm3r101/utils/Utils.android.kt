@@ -74,9 +74,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.window.core.layout.WindowHeightSizeClass
 import androidx.window.core.layout.WindowSizeClass
-import androidx.window.core.layout.WindowWidthSizeClass
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.IOException
 import java.io.InputStream
@@ -88,6 +86,7 @@ import javax.crypto.Cipher
 import javax.crypto.SecretKeyFactory
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
+import kotlin.collections.iterator
 import kotlin.random.Random
 import kotlin.random.nextInt
 import kotlin.reflect.KClass
@@ -102,6 +101,7 @@ actual fun Modifier.clearFocusOnKeyboardDismiss(): Modifier = composed {
         val focusManager = LocalFocusManager.current
         LaunchedEffect(imeIsVisible) {
             if (imeIsVisible) {
+                @Suppress("AssignedValueIsNeverRead")
                 keyboardAppearedSinceLastFocused = true
             } else if (keyboardAppearedSinceLastFocused) {
                 focusManager.clearFocus()

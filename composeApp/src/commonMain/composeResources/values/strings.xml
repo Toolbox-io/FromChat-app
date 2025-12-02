@@ -3,7 +3,7 @@
     <string name="home">Home</string>
     <string name="back">Back</string>
     <string name="about">About app</string>
-    <string name="app_desc">TwoXConnect is an app to help you connect all your devices, including Android, iOS and any desktop!</string>
+    <string name="app_desc">A 100% free, open source and private messenger.</string>
     <string name="materialYou">Enable Material You theming</string>
     <string name="materialYou_d">Enable the dynamic theme based on your wallpaper. Works only on Android 12 or higher.</string>
     <string name="theme">Theme</string>

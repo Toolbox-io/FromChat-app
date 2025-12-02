@@ -12,7 +12,7 @@ kotlin {
 
     androidLibrary {
         namespace = "com.pr0gramm3r101.utils"
-        compileSdk = 35
+        compileSdk = 36
         minSdk = 24
     }
 
@@ -26,11 +26,7 @@ kotlin {
         }
     }
 
-    jvm("desktop")
-
     sourceSets {
-        val desktopMain by getting
-
         commonMain.dependencies {
             implementation(libs.kotlin.stdlib)
             implementation(compose.runtime)
@@ -38,7 +34,7 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation(libs.constraintlayout.compose.multiplatform)
+            implementation(libs.constraintlayout)
             implementation(compose.materialIconsExtended)
         }
 
@@ -59,15 +55,11 @@ kotlin {
         iosMain.dependencies {
             // nothing
         }
-
-        desktopMain.dependencies {
-            // nothing
-        }
     }
 }
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "ru.denis0001dev.utils"
+    packageOfResClass = "com.pr0gramm3r101.utils"
     generateResClass = auto
 }

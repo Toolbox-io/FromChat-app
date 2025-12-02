@@ -1,4 +1,5 @@
 @file:Suppress("UnusedReceiverParameter", "unused", "NOTHING_TO_INLINE", "KotlinRedundantDiagnosticSuppress")
+
 package com.pr0gramm3r101.utils
 
 import androidx.compose.foundation.layout.PaddingValues
@@ -17,13 +18,13 @@ import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.LayoutDirection
-import androidx.constraintlayout.compose.ConstrainScope
-import androidx.constraintlayout.compose.ConstrainedLayoutReference
-import androidx.constraintlayout.compose.ConstraintLayoutBaseScope
-import androidx.constraintlayout.compose.HorizontalAnchorable
-import androidx.constraintlayout.compose.VerticalAnchorable
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.FontResource
+import tech.annexflow.constraintlayout.compose.ConstrainScope
+import tech.annexflow.constraintlayout.compose.ConstrainedLayoutReference
+import tech.annexflow.constraintlayout.compose.ConstraintLayoutBaseScope
+import tech.annexflow.constraintlayout.compose.HorizontalAnchorable
+import tech.annexflow.constraintlayout.compose.VerticalAnchorable
 
 @Composable
 fun Typography(fontRes: FontResource) = Typography().let {
@@ -92,7 +93,7 @@ inline fun ClipboardManager.toSupport() = object : SupportClipboardManager {
     private var listener: ((String) -> Unit)? = null
 
     override suspend fun setText(string: String) {
-        this@toSupport.setText(string.toAnnotatedString())
+        setText(string.toAnnotatedString())
         listener?.invoke(string)
     }
     override suspend fun getText() = this@toSupport.getText()?.toString() ?: ""
