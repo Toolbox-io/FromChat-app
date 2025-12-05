@@ -10,4 +10,46 @@
     <string name="as_system">As system</string>
     <string name="light">Light</string>
     <string name="dark">Dark</string>
+    
+    <!-- Server Configuration -->
+    <string name="server_config_title">Server Configuration</string>
+    <string name="server_config_subtitle">Enter server details to connect</string>
+    <string name="server_url_label">Server URL</string>
+    <string name="server_url_hint">fromchat.ru</string>
+    <string name="https_enabled">Use HTTPS</string>
+    <string name="save_continue">Save &amp; Continue</string>
+    
+    <!-- Authentication -->
+    <string name="login_title">Welcome!</string>
+    <string name="login_subtitle">Sign in to your account</string>
+    <string name="register_title">Registration</string>
+    <string name="register_subtitle">Create a new account</string>
+    <string name="username_label">@Username</string>
+    <string name="password_label">Password</string>
+    <string name="display_name_label">Display Name</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="login_button">Sign In</string>
+    <string name="register_button">Register</string>
+    <string name="login_loading">Signing in...</string>
+    <string name="register_loading">Registering...</string>
+    <string name="no_account">Don't have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="register_link">Register</string>
+    <string name="login_link">Sign In</string>
+    
+    <!-- Error Messages -->
+    <string name="error_fill_all_fields">Please fill in all fields</string>
+    <string name="error_invalid_credentials">Invalid username or password</string>
+    <string name="error_passwords_not_match">Passwords do not match</string>
+    <string name="error_connection">Connection error</string>
+    <string name="error_unknown">An unknown error occurred</string>
+    
+    <!-- Chat -->
+    <string name="public_chat_name">General Chat</string>
+    <string name="chats_list_header">Chats</string>
+    <string name="message_input_hint">Type a message...</string>
+    <string name="send_button">Send</string>
+    <string name="loading_messages">Loading messages...</string>
+    <string name="error_loading_messages">Failed to load messages</string>
+    <string name="error_sending_message">Failed to send message</string>
 </resources>

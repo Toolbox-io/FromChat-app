@@ -30,6 +30,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.core.splashscreen)
             implementation(libs.androidx.adaptive.android)
+            implementation(libs.ktor.client.android)
         }
 
         commonMain.dependencies {
@@ -39,8 +40,6 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.constraintlayout)
             implementation(libs.navigation.compose)
             implementation(compose.materialIconsExtended)
@@ -50,12 +49,20 @@ kotlin {
 
             implementation(libs.kotlinx.io.core)
             
+            // Ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.serialization.kotlinx.json)
+            implementation(libs.ktor.client.websockets)
+            implementation(libs.ktor.client.logging)
+            
             implementation(project(":utils"))
         }
 
         iosMain.dependencies {
             implementation(libs.jetbrains.kotlinx.io.bytestring)
             implementation(libs.jetbrains.kotlinx.coroutines.core)
+            implementation(libs.ktor.client.darwin)
         }
     }
 }

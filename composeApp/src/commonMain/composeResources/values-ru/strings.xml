@@ -1,4 +1,46 @@
 <resources>
     <string name="settings">Настройки</string>
     <string name="home">Главная</string>
+    
+    <!-- Server Configuration -->
+    <string name="server_config_title">Настройка сервера</string>
+    <string name="server_config_subtitle">Введите данные сервера для подключения</string>
+    <string name="server_url_label">URL сервера</string>
+    <string name="server_url_hint">fromchat.ru</string>
+    <string name="https_enabled">Использовать HTTPS</string>
+    <string name="save_continue">Сохранить и продолжить</string>
+    
+    <!-- Authentication -->
+    <string name="login_title">Добро пожаловать!</string>
+    <string name="login_subtitle">Войдите в свой аккаунт</string>
+    <string name="register_title">Регистрация</string>
+    <string name="register_subtitle">Создайте новый аккаунт</string>
+    <string name="username_label">@Имя пользователя</string>
+    <string name="password_label">Пароль</string>
+    <string name="display_name_label">Отображаемое имя</string>
+    <string name="confirm_password_label">Подтвердите пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="register_button">Зарегистрироваться</string>
+    <string name="login_loading">Вход...</string>
+    <string name="register_loading">Регистрация...</string>
+    <string name="no_account">Ещё нет аккаунта?</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="register_link">Зарегистрируйтесь</string>
+    <string name="login_link">Войдите</string>
+    
+    <!-- Error Messages -->
+    <string name="error_fill_all_fields">Пожалуйста, заполните все поля</string>
+    <string name="error_invalid_credentials">Неверное имя пользователя или пароль</string>
+    <string name="error_passwords_not_match">Пароли не совпадают</string>
+    <string name="error_connection">Ошибка соединения</string>
+    <string name="error_unknown">Произошла неизвестная ошибка</string>
+    
+    <!-- Chat -->
+    <string name="public_chat_name">Общий чат</string>
+    <string name="chats_list_header">Чаты</string>
+    <string name="message_input_hint">Введите сообщение...</string>
+    <string name="send_button">Отправить</string>
+    <string name="loading_messages">Загрузка сообщений...</string>
+    <string name="error_loading_messages">Не удалось загрузить сообщения</string>
+    <string name="error_sending_message">Не удалось отправить сообщение</string>
 </resources>
